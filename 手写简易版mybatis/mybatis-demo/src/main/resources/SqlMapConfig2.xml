@@ -1,9 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<!-- mybatis 数据源环境配置 -->
 	<environments default="dev">
 		<environment id="dev">
-			<!-- 配置数据源信息 -->
-			<dataSource type="DBCP">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.cj.jdbc.Driver"></property>
 				<property name="url" value="jdbc:mysql://192.168.104.102:3306/ssm?useSSL=false&amp;serverTimezone=UTC"></property>
 				<property name="username" value="root"></property>
@@ -15,10 +18,6 @@
 	<!-- 映射文件加载 -->
 	<mappers>
 		<!-- resource指定映射文件的类路径 -->
-		<mapper resource="mapper/UserMapper.xml"></mapper>
-		<mapper resource="mapper/UserMapper.xml"></mapper>
-		<mapper resource="mapper/UserMapper.xml"></mapper>
-		<mapper resource="mapper/UserMapper.xml"></mapper>
-		<mapper resource="mapper/UserMapper.xml"></mapper>
+		<mapper resource="mapper/UserMapper2.xml"></mapper>
 	</mappers>
 </configuration>
